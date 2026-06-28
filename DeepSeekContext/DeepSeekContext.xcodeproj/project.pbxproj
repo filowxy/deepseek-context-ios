@@ -57,6 +57,22 @@
 		A600000000000000000000D6 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000006 /* SearchServiceTests.swift */; };
 		A600000000000000000000D7 /* WebBrowseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000007 /* WebBrowseServiceTests.swift */; };
 		A600000000000000000000D8 /* ToolExecutorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000008 /* ToolExecutorTests.swift */; };
+		A200000000000000000000DD /* SkillDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* SkillDAO.swift */; };
+		A400000000000000000000D5 /* SkillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000005 /* SkillManager.swift */; };
+		A700000000000000000000D1 /* ChatContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000001 /* ChatContainerView.swift */; };
+		A700000000000000000000D2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000002 /* ChatView.swift */; };
+		A700000000000000000000D3 /* ContextManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000003 /* ContextManagementView.swift */; };
+		A700000000000000000000D4 /* ContextTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000004 /* ContextTabView.swift */; };
+		A700000000000000000000D5 /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000005 /* ConversationListView.swift */; };
+		A700000000000000000000D6 /* GlobalContextPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000006 /* GlobalContextPromptView.swift */; };
+		A700000000000000000000D7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000007 /* SettingsView.swift */; };
+		A700000000000000000000D8 /* SkillPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000008 /* SkillPickerView.swift */; };
+		A800000000000000000000D1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80000000000000000000001 /* ChatViewModel.swift */; };
+		A800000000000000000000D2 /* ContextManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80000000000000000000002 /* ContextManagementViewModel.swift */; };
+		A800000000000000000000D3 /* ConversationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80000000000000000000003 /* ConversationListViewModel.swift */; };
+		A800000000000000000000D4 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80000000000000000000004 /* SettingsViewModel.swift */; };
+		A300000000000000000000D8 /* SkillDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000008 /* SkillDAOTests.swift */; };
+		A400000000000000000000D9 /* SkillManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000009 /* SkillManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,27 +95,27 @@
 		A1000000000000000000000E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A10000000000000000000060 /* DeepSeekContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSeekContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000000000000000000061 /* DeepSeekContextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepSeekContextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A20000000000000000000001 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		A20000000000000000000002 /* ContextMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMark.swift; sourceTree = "<group>"; };
-		A20000000000000000000003 /* GlobalContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContext.swift; sourceTree = "<group>"; };
-		A20000000000000000000004 /* GlobalSuggestionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSuggestionLog.swift; sourceTree = "<group>"; };
-		A20000000000000000000005 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
-		A20000000000000000000006 /* RecallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallResult.swift; sourceTree = "<group>"; };
-		A20000000000000000000007 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		A20000000000000000000008 /* ConversationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDAO.swift; sourceTree = "<group>"; };
-		A20000000000000000000009 /* ContextMarkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMarkDAO.swift; sourceTree = "<group>"; };
-		A2000000000000000000000A /* TagDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDAO.swift; sourceTree = "<group>"; };
-		A2000000000000000000000B /* SearchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDAO.swift; sourceTree = "<group>"; };
-		A2000000000000000000000C /* GlobalContextDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContextDAO.swift; sourceTree = "<group>"; };
-		A40000000000000000000001 /* ContextEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextEngine.swift; sourceTree = "<group>"; };
-		A40000000000000000000002 /* ReminderEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEngine.swift; sourceTree = "<group>"; };
-		A40000000000000000000003 /* RecallEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallEngine.swift; sourceTree = "<group>"; };
-		A40000000000000000000004 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
-		A50000000000000000000001 /* WebViewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewMessage.swift; sourceTree = "<group>"; };
-		A50000000000000000000002 /* XMLTagParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTagParser.swift; sourceTree = "<group>"; };
-		A50000000000000000000003 /* InjectionScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionScript.swift; sourceTree = "<group>"; };
-		A50000000000000000000004 /* WebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
-		A50000000000000000000005 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
+		A20000000000000000000001 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Conversation.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* ContextMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ContextMark.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* GlobalContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/GlobalContext.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* GlobalSuggestionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/GlobalSuggestionLog.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Skill.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* RecallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/RecallResult.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/DatabaseManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* ConversationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/ConversationDAO.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* ContextMarkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/ContextMarkDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* TagDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/TagDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* SearchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/SearchDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* GlobalContextDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/GlobalContextDAO.swift; sourceTree = "<group>"; };
+		A40000000000000000000001 /* ContextEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Context/ContextEngine.swift; sourceTree = "<group>"; };
+		A40000000000000000000002 /* ReminderEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Context/ReminderEngine.swift; sourceTree = "<group>"; };
+		A40000000000000000000003 /* RecallEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Context/RecallEngine.swift; sourceTree = "<group>"; };
+		A40000000000000000000004 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Context/ConversationManager.swift; sourceTree = "<group>"; };
+		A50000000000000000000001 /* WebViewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WebView/WebViewMessage.swift; sourceTree = "<group>"; };
+		A50000000000000000000002 /* XMLTagParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WebView/XMLTagParser.swift; sourceTree = "<group>"; };
+		A50000000000000000000003 /* InjectionScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WebView/InjectionScript.swift; sourceTree = "<group>"; };
+		A50000000000000000000004 /* WebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WebView/WebViewBridge.swift; sourceTree = "<group>"; };
+		A50000000000000000000005 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WebView/WebViewCoordinator.swift; sourceTree = "<group>"; };
 		A30000000000000000000001 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		A30000000000000000000002 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
 		A30000000000000000000003 /* ConversationDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDAOTests.swift; sourceTree = "<group>"; };
@@ -113,14 +129,30 @@
 		A40000000000000000000008 /* ConversationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManagerTests.swift; sourceTree = "<group>"; };
 		A50000000000000000000006 /* XMLTagParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTagParserTests.swift; sourceTree = "<group>"; };
 		A50000000000000000000007 /* WebViewBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridgeTests.swift; sourceTree = "<group>"; };
-		A60000000000000000000001 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
-		A60000000000000000000002 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
-		A60000000000000000000003 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
-		A60000000000000000000004 /* WebBrowseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowseService.swift; sourceTree = "<group>"; };
-		A60000000000000000000005 /* ToolExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolExecutor.swift; sourceTree = "<group>"; };
+		A60000000000000000000001 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Keychain/KeychainManager.swift; sourceTree = "<group>"; };
+		A60000000000000000000002 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Tools/SearchModels.swift; sourceTree = "<group>"; };
+		A60000000000000000000003 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Tools/SearchService.swift; sourceTree = "<group>"; };
+		A60000000000000000000004 /* WebBrowseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Tools/WebBrowseService.swift; sourceTree = "<group>"; };
+		A60000000000000000000005 /* ToolExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Tools/ToolExecutor.swift; sourceTree = "<group>"; };
 		A60000000000000000000006 /* SearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
 		A60000000000000000000007 /* WebBrowseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowseServiceTests.swift; sourceTree = "<group>"; };
 		A60000000000000000000008 /* ToolExecutorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolExecutorTests.swift; sourceTree = "<group>"; };
+		A2000000000000000000000D /* SkillDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Database/SkillDAO.swift; sourceTree = "<group>"; };
+		A40000000000000000000005 /* SkillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Context/SkillManager.swift; sourceTree = "<group>"; };
+		A70000000000000000000001 /* ChatContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ChatContainerView.swift; sourceTree = "<group>"; };
+		A70000000000000000000002 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ChatView.swift; sourceTree = "<group>"; };
+		A70000000000000000000003 /* ContextManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContextManagementView.swift; sourceTree = "<group>"; };
+		A70000000000000000000004 /* ContextTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContextTabView.swift; sourceTree = "<group>"; };
+		A70000000000000000000005 /* ConversationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ConversationListView.swift; sourceTree = "<group>"; };
+		A70000000000000000000006 /* GlobalContextPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/GlobalContextPromptView.swift; sourceTree = "<group>"; };
+		A70000000000000000000007 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
+		A70000000000000000000008 /* SkillPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SkillPickerView.swift; sourceTree = "<group>"; };
+		A80000000000000000000001 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ChatViewModel.swift; sourceTree = "<group>"; };
+		A80000000000000000000002 /* ContextManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ContextManagementViewModel.swift; sourceTree = "<group>"; };
+		A80000000000000000000003 /* ConversationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ConversationListViewModel.swift; sourceTree = "<group>"; };
+		A80000000000000000000004 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/SettingsViewModel.swift; sourceTree = "<group>"; };
+		A30000000000000000000008 /* SkillDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDAOTests.swift; sourceTree = "<group>"; };
+		A40000000000000000000009 /* SkillManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +229,20 @@
 				A60000000000000000000003 /* SearchService.swift */,
 				A60000000000000000000004 /* WebBrowseService.swift */,
 				A60000000000000000000005 /* ToolExecutor.swift */,
+				A2000000000000000000000D /* SkillDAO.swift */,
+				A40000000000000000000005 /* SkillManager.swift */,
+				A70000000000000000000001 /* ChatContainerView.swift */,
+				A70000000000000000000002 /* ChatView.swift */,
+				A70000000000000000000003 /* ContextManagementView.swift */,
+				A70000000000000000000004 /* ContextTabView.swift */,
+				A70000000000000000000005 /* ConversationListView.swift */,
+				A70000000000000000000006 /* GlobalContextPromptView.swift */,
+				A70000000000000000000007 /* SettingsView.swift */,
+				A70000000000000000000008 /* SkillPickerView.swift */,
+				A80000000000000000000001 /* ChatViewModel.swift */,
+				A80000000000000000000002 /* ContextManagementViewModel.swift */,
+				A80000000000000000000003 /* ConversationListViewModel.swift */,
+				A80000000000000000000004 /* SettingsViewModel.swift */,
 			A10000000000000000000006 /* Assets.xcassets */,
 		);
 		path = DeepSeekContext;
@@ -221,6 +267,8 @@
 			A60000000000000000000006 /* SearchServiceTests.swift */,
 			A60000000000000000000007 /* WebBrowseServiceTests.swift */,
 			A60000000000000000000008 /* ToolExecutorTests.swift */,
+			A30000000000000000000008 /* SkillDAOTests.swift */,
+			A40000000000000000000009 /* SkillManagerTests.swift */,
 		);
 		path = DeepSeekContextTests;
 		sourceTree = "<group>";
@@ -354,6 +402,20 @@
 				A600000000000000000000D3 /* SearchService.swift in Sources */,
 				A600000000000000000000D4 /* WebBrowseService.swift in Sources */,
 				A600000000000000000000D5 /* ToolExecutor.swift in Sources */,
+				A200000000000000000000DD /* SkillDAO.swift in Sources */,
+				A400000000000000000000D5 /* SkillManager.swift in Sources */,
+				A700000000000000000000D1 /* ChatContainerView.swift in Sources */,
+				A700000000000000000000D2 /* ChatView.swift in Sources */,
+				A700000000000000000000D3 /* ContextManagementView.swift in Sources */,
+				A700000000000000000000D4 /* ContextTabView.swift in Sources */,
+				A700000000000000000000D5 /* ConversationListView.swift in Sources */,
+				A700000000000000000000D6 /* GlobalContextPromptView.swift in Sources */,
+				A700000000000000000000D7 /* SettingsView.swift in Sources */,
+				A700000000000000000000D8 /* SkillPickerView.swift in Sources */,
+				A800000000000000000000D1 /* ChatViewModel.swift in Sources */,
+				A800000000000000000000D2 /* ContextManagementViewModel.swift in Sources */,
+				A800000000000000000000D3 /* ConversationListViewModel.swift in Sources */,
+				A800000000000000000000D4 /* SettingsViewModel.swift in Sources */,
 		);
 		runOnlyForDeploymentPostprocessing = 0;
 	};
@@ -377,9 +439,11 @@
 				A600000000000000000000D6 /* SearchServiceTests.swift in Sources */,
 				A600000000000000000000D7 /* WebBrowseServiceTests.swift in Sources */,
 				A600000000000000000000D8 /* ToolExecutorTests.swift in Sources */,
+				A300000000000000000000D8 /* SkillDAOTests.swift in Sources */,
+				A400000000000000000000D9 /* SkillManagerTests.swift in Sources */,
 			);
-		runOnlyForDeploymentPostprocessing = 0;
-	};
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */

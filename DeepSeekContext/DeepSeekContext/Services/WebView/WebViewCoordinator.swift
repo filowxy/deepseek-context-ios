@@ -44,6 +44,8 @@ final class WebViewCoordinator: NSObject {
             js = "window.DeepSeekContextNative.appendInput(\"\(escapedJS(text))\");"
         case .injectSystem(let text):
             js = "window.DeepSeekContextNative.injectSystem(\"\(escapedJS(text))\");"
+        case .clickSend:
+            js = "window.DeepSeekContextNative.clickSend();"
         case .getInput:
             js = "window.DeepSeekContextNative.getInput();"
         case .getOutput:

@@ -88,7 +88,8 @@ enum InjectionScript {
         // Detect user sending a message.
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' && !e.shiftKey) {
-                postNative('sendStarted', {});
+                const input = findInput();
+                postNative('sendStarted', { text: input ? input.value : '' });
             }
         }, true);
 

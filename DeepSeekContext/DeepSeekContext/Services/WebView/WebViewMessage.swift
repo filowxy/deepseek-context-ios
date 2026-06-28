@@ -14,6 +14,7 @@ enum OutgoingWebViewCommand: Equatable {
     case setInput(text: String)
     case appendInput(text: String)
     case injectSystem(text: String)
+    case clickSend
     case getInput
     case getOutput
 }

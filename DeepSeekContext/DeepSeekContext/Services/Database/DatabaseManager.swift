@@ -136,6 +136,19 @@ actor DatabaseManager {
             created_at TEXT NOT NULL
         );
 
+        CREATE TABLE IF NOT EXISTS skills (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            whentouse TEXT NOT NULL,
+            description TEXT NOT NULL,
+            scope TEXT NOT NULL CHECK(scope IN ('global', 'project')),
+            conversation_id TEXT REFERENCES conversations(id),
+            last_used_at TEXT,
+            updated_at TEXT NOT NULL
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_skills_scope ON skills(scope, conversation_id);
+
         CREATE VIRTUAL TABLE IF NOT EXISTS context_marks_fts USING fts5(
             content,
             content=context_marks,

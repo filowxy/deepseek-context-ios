@@ -2,13 +2,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("DeepSeek Context")
+        TabView {
+            ConversationListView()
+                .tabItem {
+                    Label("Chat", systemImage: "message.fill")
+                }
+
+            ContextTabView()
+                .tabItem {
+                    Label("Context", systemImage: "bookmark.fill")
+                }
+
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
-        .padding()
     }
 }
 

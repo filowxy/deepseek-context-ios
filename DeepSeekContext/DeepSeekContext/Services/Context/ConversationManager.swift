@@ -7,6 +7,7 @@ actor ConversationManager {
     private var conversationDAO: ConversationDAO { ConversationDAO.shared }
     private var markDAO: ContextMarkDAO { ContextMarkDAO.shared }
     private var tagDAO: TagDAO { TagDAO.shared }
+    private var skillDAO: SkillDAO { SkillDAO.shared }
 
     static let activeConversationSoftLimit = 50
 
@@ -26,7 +27,7 @@ actor ConversationManager {
         try await conversationDAO.linkChild(childId: child.id, parentId: parent.id)
         try await conversationDAO.initializeCounterFromParent(childId: child.id, parentId: parent.id)
         try await inheritMarks(childId: child.id, parentId: parent.id)
-        // ponytail: project skill inheritance will be wired when SkillManager lands in Phase 6
+        try await skillDAO.inheritProjectSkills(from: parent.id, to: child.id)
         return child
     }
 
@@ -40,6 +41,10 @@ actor ConversationManager {
 
     func activeConversationCount() async throws -> Int {
         try await conversationDAO.countActive()
+    }
+
+    func activeConversations() async throws -> [Conversation] {
+        try await conversationDAO.fetchActive()
     }
 
     func isAtSoftLimit() async throws -> Bool {

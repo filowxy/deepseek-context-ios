@@ -11,7 +11,10 @@ final class WebViewBridge: NSObject {
 
     private let contextEngine = ContextEngine.shared
     private let recallEngine = RecallEngine.shared
+    private let skillManager = SkillManager.shared
     private let toolExecutor: ToolExecutor
+
+    private var pendingUserInput: String = ""
 
     init(toolExecutor: ToolExecutor = .shared) {
         self.toolExecutor = toolExecutor
@@ -22,6 +25,20 @@ final class WebViewBridge: NSObject {
         conversationId = id
         messageIndex = 0
         roundCounter = 0
+        await injectSkillLoad()
+    }
+
+    private func injectSkillLoad() async {
+        guard let conversationId else { return }
+        do {
+            let skills = try await skillManager.loadSkills(for: conversationId)
+            let text = await skillManager.formatSkillLoad(skills: skills)
+            if !text.isEmpty {
+                delegate?.bridge(self, sendCommand: .injectSystem(text: text))
+            }
+        } catch {
+            delegate?.bridge(self, didEncounterError: "skill load error: \(error)")
+        }
     }
 
     /// Advance to the next message round and notify the web page.
@@ -42,6 +59,7 @@ final class WebViewBridge: NSObject {
                 handleFinalReply(text)
             }
         case "sendStarted":
+            pendingUserInput = payload["text"] as? String ?? ""
             startNewRound()
         case "domHealth":
             let healthy = payload["healthy"] as? Bool ?? false
@@ -158,8 +176,34 @@ final class WebViewBridge: NSObject {
                 delegate?.bridge(self, didEncounterError: "invalid searchinfo \(payload.searchId)")
             }
 
+        case .callSkill(let payload):
+            await executeCallSkill(name: payload.name)
+
         default:
             break
+        }
+    }
+
+    private func executeCallSkill(name: String) async {
+        guard let conversationId else {
+            delegate?.bridge(self, didEncounterError: "no active conversation")
+            return
+        }
+        guard !pendingUserInput.isEmpty else {
+            delegate?.bridge(self, didEncounterError: "skill replay requires captured user input")
+            return
+        }
+        do {
+            guard let skill = try await skillManager.findSkill(name: name, conversationId: conversationId) else {
+                delegate?.bridge(self, didEncounterError: "skill not found: \(name)")
+                return
+            }
+            try await skillManager.recordUsage(id: skill.id)
+            delegate?.bridge(self, sendCommand: .injectSystem(text: "<system>\(skill.description)</system>"))
+            delegate?.bridge(self, sendCommand: .setInput(text: pendingUserInput))
+            delegate?.bridge(self, sendCommand: .clickSend)
+        } catch {
+            delegate?.bridge(self, didEncounterError: "skill error: \(error)")
         }
     }
 
@@ -206,7 +250,7 @@ final class WebViewBridge: NSObject {
 
     private func isDelegateAction(_ action: XMLTagAction) -> Bool {
         switch action {
-        case .callSkill, .globalSuggest: return true
+        case .globalSuggest: return true
         default: return false
         }
     }
