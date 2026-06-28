@@ -11,6 +11,11 @@ final class WebViewBridge: NSObject {
 
     private let contextEngine = ContextEngine.shared
     private let recallEngine = RecallEngine.shared
+    private let toolExecutor: ToolExecutor
+
+    init(toolExecutor: ToolExecutor = .shared) {
+        self.toolExecutor = toolExecutor
+    }
 
     /// Bind the bridge to a conversation and reset per-conversation state.
     func bindConversation(id: String) async {
@@ -62,9 +67,23 @@ final class WebViewBridge: NSObject {
         guard !actions.isEmpty else { return }
 
         Task {
-            for action in actions {
-                await execute(action)
+            let immediate = actions.filter { !isToolAction($0) && !isDelegateAction($0) }
+            let tools = actions.filter(isToolAction)
+            let delegateActions = actions.filter(isDelegateAction)
+
+            for action in immediate {
+                await executeImmediate(action)
             }
+
+            if !tools.isEmpty {
+                let (results, skipped) = await toolExecutor.executeBatch(tools)
+                injectToolResults(results, skipped: skipped)
+            }
+
+            for action in delegateActions {
+                delegate?.bridge(self, didReceiveAction: action)
+            }
+
             roundCounter += 1
             if !cleanText.isEmpty {
                 delegate?.bridge(self, didReceiveCleanText: cleanText)
@@ -72,7 +91,9 @@ final class WebViewBridge: NSObject {
         }
     }
 
-    private func execute(_ action: XMLTagAction) async {
+    // MARK: - Immediate actions
+
+    private func executeImmediate(_ action: XMLTagAction) async {
         guard let conversationId else {
             delegate?.bridge(self, didEncounterError: "no active conversation")
             return
@@ -137,9 +158,56 @@ final class WebViewBridge: NSObject {
                 delegate?.bridge(self, didEncounterError: "invalid searchinfo \(payload.searchId)")
             }
 
-        case .search, .open, .callSkill, .globalSuggest:
-            // ponytail: tool/skill actions are forwarded to the delegate for Phase 5/6 handling.
-            delegate?.bridge(self, didReceiveAction: action)
+        default:
+            break
+        }
+    }
+
+    // MARK: - Tool results
+
+    private func injectToolResults(_ results: [ToolResult], skipped: [String]) {
+        for result in results {
+            let text: String
+            switch result {
+            case .search(let searchResult):
+                text = format(searchResult: searchResult)
+            case .browse(let browseResult):
+                text = format(browseResult: browseResult)
+            case .failed(let message):
+                text = "<tool-error>\(message)</tool-error>"
+            }
+            delegate?.bridge(self, sendCommand: .injectSystem(text: text))
+        }
+
+        if !skipped.isEmpty {
+            let notice = "以下工具调用因超时未执行: \(skipped.joined(separator: ", "))"
+            delegate?.bridge(self, sendCommand: .injectSystem(text: "<system>\(notice)</system>"))
+        }
+    }
+
+    private func format(searchResult: SearchResult) -> String {
+        let items = searchResult.results.map { "- [\($0.title)](\($0.url))\n\($0.snippet)" }.joined(separator: "\n\n")
+        return "<search-result>\n查询: \(searchResult.query)\n找到约 \(searchResult.totalEstimated) 条结果\n\n\(items)\n</search-result>"
+    }
+
+    private func format(browseResult: BrowseResult) -> String {
+        let titleLine = browseResult.title.map { "标题: \($0)\n" } ?? ""
+        return "<browse-result>\n\(titleLine)\(browseResult.content)\n</browse-result>"
+    }
+
+    // MARK: - Helpers
+
+    private func isToolAction(_ action: XMLTagAction) -> Bool {
+        switch action {
+        case .search, .open: return true
+        default: return false
+        }
+    }
+
+    private func isDelegateAction(_ action: XMLTagAction) -> Bool {
+        switch action {
+        case .callSkill, .globalSuggest: return true
+        default: return false
         }
     }
 

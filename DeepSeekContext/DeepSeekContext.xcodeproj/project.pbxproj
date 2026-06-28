@@ -49,6 +49,14 @@
 		A400000000000000000000D8 /* ConversationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000008 /* ConversationManagerTests.swift */; };
 		A500000000000000000000D6 /* XMLTagParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000006 /* XMLTagParserTests.swift */; };
 		A500000000000000000000D7 /* WebViewBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000007 /* WebViewBridgeTests.swift */; };
+		A600000000000000000000D1 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000001 /* KeychainManager.swift */; };
+		A600000000000000000000D2 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000002 /* SearchModels.swift */; };
+		A600000000000000000000D3 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000003 /* SearchService.swift */; };
+		A600000000000000000000D4 /* WebBrowseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000004 /* WebBrowseService.swift */; };
+		A600000000000000000000D5 /* ToolExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000005 /* ToolExecutor.swift */; };
+		A600000000000000000000D6 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000006 /* SearchServiceTests.swift */; };
+		A600000000000000000000D7 /* WebBrowseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000007 /* WebBrowseServiceTests.swift */; };
+		A600000000000000000000D8 /* ToolExecutorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60000000000000000000008 /* ToolExecutorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +113,14 @@
 		A40000000000000000000008 /* ConversationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManagerTests.swift; sourceTree = "<group>"; };
 		A50000000000000000000006 /* XMLTagParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTagParserTests.swift; sourceTree = "<group>"; };
 		A50000000000000000000007 /* WebViewBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridgeTests.swift; sourceTree = "<group>"; };
+		A60000000000000000000001 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		A60000000000000000000002 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		A60000000000000000000003 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		A60000000000000000000004 /* WebBrowseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowseService.swift; sourceTree = "<group>"; };
+		A60000000000000000000005 /* ToolExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolExecutor.swift; sourceTree = "<group>"; };
+		A60000000000000000000006 /* SearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
+		A60000000000000000000007 /* WebBrowseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowseServiceTests.swift; sourceTree = "<group>"; };
+		A60000000000000000000008 /* ToolExecutorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolExecutorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,31 +192,39 @@
 				A50000000000000000000003 /* InjectionScript.swift */,
 				A50000000000000000000004 /* WebViewBridge.swift */,
 				A50000000000000000000005 /* WebViewCoordinator.swift */,
-				A10000000000000000000006 /* Assets.xcassets */,
-			);
-			path = DeepSeekContext;
-			sourceTree = "<group>";
-		};
-		A10000000000000000000083 /* DeepSeekContextTests */ = {
-			isa = PBXGroup;
-			children = (
-				A30000000000000000000001 /* TestHelpers.swift */,
-				A30000000000000000000002 /* DatabaseManagerTests.swift */,
-				A30000000000000000000003 /* ConversationDAOTests.swift */,
-				A30000000000000000000004 /* ContextMarkDAOTests.swift */,
-				A30000000000000000000005 /* TagDAOTests.swift */,
-				A30000000000000000000006 /* SearchDAOTests.swift */,
-				A30000000000000000000007 /* GlobalContextDAOTests.swift */,
-				A40000000000000000000005 /* ContextEngineTests.swift */,
-				A40000000000000000000006 /* ReminderEngineTests.swift */,
-				A40000000000000000000007 /* RecallEngineTests.swift */,
-				A40000000000000000000008 /* ConversationManagerTests.swift */,
-				A50000000000000000000006 /* XMLTagParserTests.swift */,
-				A50000000000000000000007 /* WebViewBridgeTests.swift */,
-			);
-			path = DeepSeekContextTests;
-			sourceTree = "<group>";
-		};
+				A60000000000000000000001 /* KeychainManager.swift */,
+				A60000000000000000000002 /* SearchModels.swift */,
+				A60000000000000000000003 /* SearchService.swift */,
+				A60000000000000000000004 /* WebBrowseService.swift */,
+				A60000000000000000000005 /* ToolExecutor.swift */,
+			A10000000000000000000006 /* Assets.xcassets */,
+		);
+		path = DeepSeekContext;
+		sourceTree = "<group>";
+	};
+	A10000000000000000000083 /* DeepSeekContextTests */ = {
+		isa = PBXGroup;
+		children = (
+			A30000000000000000000001 /* TestHelpers.swift */,
+			A30000000000000000000002 /* DatabaseManagerTests.swift */,
+			A30000000000000000000003 /* ConversationDAOTests.swift */,
+			A30000000000000000000004 /* ContextMarkDAOTests.swift */,
+			A30000000000000000000005 /* TagDAOTests.swift */,
+			A30000000000000000000006 /* SearchDAOTests.swift */,
+			A30000000000000000000007 /* GlobalContextDAOTests.swift */,
+			A40000000000000000000005 /* ContextEngineTests.swift */,
+			A40000000000000000000006 /* ReminderEngineTests.swift */,
+			A40000000000000000000007 /* RecallEngineTests.swift */,
+			A40000000000000000000008 /* ConversationManagerTests.swift */,
+			A50000000000000000000006 /* XMLTagParserTests.swift */,
+			A50000000000000000000007 /* WebViewBridgeTests.swift */,
+			A60000000000000000000006 /* SearchServiceTests.swift */,
+			A60000000000000000000007 /* WebBrowseServiceTests.swift */,
+			A60000000000000000000008 /* ToolExecutorTests.swift */,
+		);
+		path = DeepSeekContextTests;
+		sourceTree = "<group>";
+	};
 		A10000000000000000000084 = {
 			isa = PBXGroup;
 			children = (
@@ -325,12 +349,17 @@
 				A500000000000000000000D3 /* InjectionScript.swift in Sources */,
 				A500000000000000000000D4 /* WebViewBridge.swift in Sources */,
 				A500000000000000000000D5 /* WebViewCoordinator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A10000000000000000000074 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+				A600000000000000000000D1 /* KeychainManager.swift in Sources */,
+				A600000000000000000000D2 /* SearchModels.swift in Sources */,
+				A600000000000000000000D3 /* SearchService.swift in Sources */,
+				A600000000000000000000D4 /* WebBrowseService.swift in Sources */,
+				A600000000000000000000D5 /* ToolExecutor.swift in Sources */,
+		);
+		runOnlyForDeploymentPostprocessing = 0;
+	};
+	A10000000000000000000074 /* Sources */ = {
+		isa = PBXSourcesBuildPhase;
+		buildActionMask = 2147483647;
 			files = (
 				A300000000000000000000D1 /* TestHelpers.swift in Sources */,
 				A300000000000000000000D2 /* DatabaseManagerTests.swift in Sources */,
@@ -345,9 +374,12 @@
 				A400000000000000000000D8 /* ConversationManagerTests.swift in Sources */,
 				A500000000000000000000D6 /* XMLTagParserTests.swift in Sources */,
 				A500000000000000000000D7 /* WebViewBridgeTests.swift in Sources */,
+				A600000000000000000000D6 /* SearchServiceTests.swift in Sources */,
+				A600000000000000000000D7 /* WebBrowseServiceTests.swift in Sources */,
+				A600000000000000000000D8 /* ToolExecutorTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+		runOnlyForDeploymentPostprocessing = 0;
+	};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
