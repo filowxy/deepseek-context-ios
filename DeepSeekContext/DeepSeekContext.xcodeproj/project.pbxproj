@@ -31,6 +31,11 @@
 		A400000000000000000000D2 /* ReminderEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000002 /* ReminderEngine.swift */; };
 		A400000000000000000000D3 /* RecallEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000003 /* RecallEngine.swift */; };
 		A400000000000000000000D4 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000004 /* ConversationManager.swift */; };
+		A500000000000000000000D1 /* WebViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000001 /* WebViewMessage.swift */; };
+		A500000000000000000000D2 /* XMLTagParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000002 /* XMLTagParser.swift */; };
+		A500000000000000000000D3 /* InjectionScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000003 /* InjectionScript.swift */; };
+		A500000000000000000000D4 /* WebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000004 /* WebViewBridge.swift */; };
+		A500000000000000000000D5 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000005 /* WebViewCoordinator.swift */; };
 		A300000000000000000000D1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000001 /* TestHelpers.swift */; };
 		A300000000000000000000D2 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000002 /* DatabaseManagerTests.swift */; };
 		A300000000000000000000D3 /* ConversationDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000003 /* ConversationDAOTests.swift */; };
@@ -42,6 +47,8 @@
 		A400000000000000000000D6 /* ReminderEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000006 /* ReminderEngineTests.swift */; };
 		A400000000000000000000D7 /* RecallEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000007 /* RecallEngineTests.swift */; };
 		A400000000000000000000D8 /* ConversationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40000000000000000000008 /* ConversationManagerTests.swift */; };
+		A500000000000000000000D6 /* XMLTagParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000006 /* XMLTagParserTests.swift */; };
+		A500000000000000000000D7 /* WebViewBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50000000000000000000007 /* WebViewBridgeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +87,11 @@
 		A40000000000000000000002 /* ReminderEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEngine.swift; sourceTree = "<group>"; };
 		A40000000000000000000003 /* RecallEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallEngine.swift; sourceTree = "<group>"; };
 		A40000000000000000000004 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
+		A50000000000000000000001 /* WebViewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewMessage.swift; sourceTree = "<group>"; };
+		A50000000000000000000002 /* XMLTagParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTagParser.swift; sourceTree = "<group>"; };
+		A50000000000000000000003 /* InjectionScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionScript.swift; sourceTree = "<group>"; };
+		A50000000000000000000004 /* WebViewBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
+		A50000000000000000000005 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
 		A30000000000000000000001 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		A30000000000000000000002 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
 		A30000000000000000000003 /* ConversationDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDAOTests.swift; sourceTree = "<group>"; };
@@ -91,6 +103,8 @@
 		A40000000000000000000006 /* ReminderEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEngineTests.swift; sourceTree = "<group>"; };
 		A40000000000000000000007 /* RecallEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallEngineTests.swift; sourceTree = "<group>"; };
 		A40000000000000000000008 /* ConversationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManagerTests.swift; sourceTree = "<group>"; };
+		A50000000000000000000006 /* XMLTagParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTagParserTests.swift; sourceTree = "<group>"; };
+		A50000000000000000000007 /* WebViewBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBridgeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +171,11 @@
 				A40000000000000000000002 /* ReminderEngine.swift */,
 				A40000000000000000000003 /* RecallEngine.swift */,
 				A40000000000000000000004 /* ConversationManager.swift */,
+				A50000000000000000000001 /* WebViewMessage.swift */,
+				A50000000000000000000002 /* XMLTagParser.swift */,
+				A50000000000000000000003 /* InjectionScript.swift */,
+				A50000000000000000000004 /* WebViewBridge.swift */,
+				A50000000000000000000005 /* WebViewCoordinator.swift */,
 				A10000000000000000000006 /* Assets.xcassets */,
 			);
 			path = DeepSeekContext;
@@ -176,6 +195,8 @@
 				A40000000000000000000006 /* ReminderEngineTests.swift */,
 				A40000000000000000000007 /* RecallEngineTests.swift */,
 				A40000000000000000000008 /* ConversationManagerTests.swift */,
+				A50000000000000000000006 /* XMLTagParserTests.swift */,
+				A50000000000000000000007 /* WebViewBridgeTests.swift */,
 			);
 			path = DeepSeekContextTests;
 			sourceTree = "<group>";
@@ -299,6 +320,11 @@
 				A400000000000000000000D2 /* ReminderEngine.swift in Sources */,
 				A400000000000000000000D3 /* RecallEngine.swift in Sources */,
 				A400000000000000000000D4 /* ConversationManager.swift in Sources */,
+				A500000000000000000000D1 /* WebViewMessage.swift in Sources */,
+				A500000000000000000000D2 /* XMLTagParser.swift in Sources */,
+				A500000000000000000000D3 /* InjectionScript.swift in Sources */,
+				A500000000000000000000D4 /* WebViewBridge.swift in Sources */,
+				A500000000000000000000D5 /* WebViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +339,12 @@
 				A300000000000000000000D5 /* TagDAOTests.swift in Sources */,
 				A300000000000000000000D6 /* SearchDAOTests.swift in Sources */,
 				A300000000000000000000D7 /* GlobalContextDAOTests.swift in Sources */,
+				A400000000000000000000D5 /* ContextEngineTests.swift in Sources */,
+				A400000000000000000000D6 /* ReminderEngineTests.swift in Sources */,
+				A400000000000000000000D7 /* RecallEngineTests.swift in Sources */,
+				A400000000000000000000D8 /* ConversationManagerTests.swift in Sources */,
+				A500000000000000000000D6 /* XMLTagParserTests.swift in Sources */,
+				A500000000000000000000D7 /* WebViewBridgeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
