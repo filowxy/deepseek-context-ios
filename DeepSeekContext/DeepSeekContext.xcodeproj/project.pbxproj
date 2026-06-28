@@ -14,7 +14,26 @@
 		A10000000000000000000009 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000000000000000000000A /* WebKit.framework */; };
 		A1000000000000000000000B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000000000000000000000C /* Security.framework */; };
 		A1000000000000000000000D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000000000000000000000E /* libsqlite3.tbd */; };
-		A10000000000000000000020 /* DeepSeekContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000021 /* DeepSeekContextTests.swift */; };
+		A1000000000000000000000F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000000000000000000000E /* libsqlite3.tbd */; };
+		A200000000000000000000D1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* Conversation.swift */; };
+		A200000000000000000000D2 /* ContextMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ContextMark.swift */; };
+		A200000000000000000000D3 /* GlobalContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* GlobalContext.swift */; };
+		A200000000000000000000D4 /* GlobalSuggestionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* GlobalSuggestionLog.swift */; };
+		A200000000000000000000D5 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Skill.swift */; };
+		A200000000000000000000D6 /* RecallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* RecallResult.swift */; };
+		A200000000000000000000D7 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* DatabaseManager.swift */; };
+		A200000000000000000000D8 /* ConversationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* ConversationDAO.swift */; };
+		A200000000000000000000D9 /* ContextMarkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* ContextMarkDAO.swift */; };
+		A200000000000000000000DA /* TagDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* TagDAO.swift */; };
+		A200000000000000000000DB /* SearchDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* SearchDAO.swift */; };
+		A200000000000000000000DC /* GlobalContextDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* GlobalContextDAO.swift */; };
+		A300000000000000000000D1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000001 /* TestHelpers.swift */; };
+		A300000000000000000000D2 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000002 /* DatabaseManagerTests.swift */; };
+		A300000000000000000000D3 /* ConversationDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000003 /* ConversationDAOTests.swift */; };
+		A300000000000000000000D4 /* ContextMarkDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000004 /* ContextMarkDAOTests.swift */; };
+		A300000000000000000000D5 /* TagDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000005 /* TagDAOTests.swift */; };
+		A300000000000000000000D6 /* SearchDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000006 /* SearchDAOTests.swift */; };
+		A300000000000000000000D7 /* GlobalContextDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000007 /* GlobalContextDAOTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +54,27 @@
 		A1000000000000000000000A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A1000000000000000000000C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A1000000000000000000000E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A10000000000000000000021 /* DeepSeekContextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekContextTests.swift; sourceTree = "<group>"; };
 		A10000000000000000000060 /* DeepSeekContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSeekContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000000000000000000061 /* DeepSeekContextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepSeekContextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000001 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* ContextMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMark.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* GlobalContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContext.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* GlobalSuggestionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSuggestionLog.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* RecallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallResult.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* ConversationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDAO.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* ContextMarkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMarkDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* TagDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* SearchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDAO.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* GlobalContextDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContextDAO.swift; sourceTree = "<group>"; };
+		A30000000000000000000001 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		A30000000000000000000002 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
+		A30000000000000000000003 /* ConversationDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDAOTests.swift; sourceTree = "<group>"; };
+		A30000000000000000000004 /* ContextMarkDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMarkDAOTests.swift; sourceTree = "<group>"; };
+		A30000000000000000000005 /* TagDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDAOTests.swift; sourceTree = "<group>"; };
+		A30000000000000000000006 /* SearchDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDAOTests.swift; sourceTree = "<group>"; };
+		A30000000000000000000007 /* GlobalContextDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalContextDAOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1000000000000000000000F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +125,18 @@
 			children = (
 				A10000000000000000000002 /* DeepSeekContextApp.swift */,
 				A10000000000000000000004 /* ContentView.swift */,
+				A20000000000000000000001 /* Conversation.swift */,
+				A20000000000000000000002 /* ContextMark.swift */,
+				A20000000000000000000003 /* GlobalContext.swift */,
+				A20000000000000000000004 /* GlobalSuggestionLog.swift */,
+				A20000000000000000000005 /* Skill.swift */,
+				A20000000000000000000006 /* RecallResult.swift */,
+				A20000000000000000000007 /* DatabaseManager.swift */,
+				A20000000000000000000008 /* ConversationDAO.swift */,
+				A20000000000000000000009 /* ContextMarkDAO.swift */,
+				A2000000000000000000000A /* TagDAO.swift */,
+				A2000000000000000000000B /* SearchDAO.swift */,
+				A2000000000000000000000C /* GlobalContextDAO.swift */,
 				A10000000000000000000006 /* Assets.xcassets */,
 			);
 			path = DeepSeekContext;
@@ -95,7 +145,13 @@
 		A10000000000000000000083 /* DeepSeekContextTests */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000021 /* DeepSeekContextTests.swift */,
+				A30000000000000000000001 /* TestHelpers.swift */,
+				A30000000000000000000002 /* DatabaseManagerTests.swift */,
+				A30000000000000000000003 /* ConversationDAOTests.swift */,
+				A30000000000000000000004 /* ContextMarkDAOTests.swift */,
+				A30000000000000000000005 /* TagDAOTests.swift */,
+				A30000000000000000000006 /* SearchDAOTests.swift */,
+				A30000000000000000000007 /* GlobalContextDAOTests.swift */,
 			);
 			path = DeepSeekContextTests;
 			sourceTree = "<group>";
@@ -203,6 +259,18 @@
 			files = (
 				A10000000000000000000001 /* DeepSeekContextApp.swift in Sources */,
 				A10000000000000000000003 /* ContentView.swift in Sources */,
+				A200000000000000000000D1 /* Conversation.swift in Sources */,
+				A200000000000000000000D2 /* ContextMark.swift in Sources */,
+				A200000000000000000000D3 /* GlobalContext.swift in Sources */,
+				A200000000000000000000D4 /* GlobalSuggestionLog.swift in Sources */,
+				A200000000000000000000D5 /* Skill.swift in Sources */,
+				A200000000000000000000D6 /* RecallResult.swift in Sources */,
+				A200000000000000000000D7 /* DatabaseManager.swift in Sources */,
+				A200000000000000000000D8 /* ConversationDAO.swift in Sources */,
+				A200000000000000000000D9 /* ContextMarkDAO.swift in Sources */,
+				A200000000000000000000DA /* TagDAO.swift in Sources */,
+				A200000000000000000000DB /* SearchDAO.swift in Sources */,
+				A200000000000000000000DC /* GlobalContextDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000020 /* DeepSeekContextTests.swift in Sources */,
+				A300000000000000000000D1 /* TestHelpers.swift in Sources */,
+				A300000000000000000000D2 /* DatabaseManagerTests.swift in Sources */,
+				A300000000000000000000D3 /* ConversationDAOTests.swift in Sources */,
+				A300000000000000000000D4 /* ContextMarkDAOTests.swift in Sources */,
+				A300000000000000000000D5 /* TagDAOTests.swift in Sources */,
+				A300000000000000000000D6 /* SearchDAOTests.swift in Sources */,
+				A300000000000000000000D7 /* GlobalContextDAOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
