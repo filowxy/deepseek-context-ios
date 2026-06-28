@@ -155,7 +155,7 @@ actor ContextMarkDAO {
         return max(parentMax, selfMax) + 1
     }
 
-    private func maxMarkId(for conversationId: String) async throws -> Int64 {
+    func maxMarkId(for conversationId: String) async throws -> Int64 {
         let sql = "SELECT COALESCE(MAX(mark_id), 0) FROM context_marks WHERE conversation_id = ?;"
         let stmt = try db.prepare(sql)
         defer { sqlite3_finalize(stmt) }
